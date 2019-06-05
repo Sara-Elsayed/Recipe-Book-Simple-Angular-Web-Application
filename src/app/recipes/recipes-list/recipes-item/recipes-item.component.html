@@ -1,0 +1,14 @@
+<a style="cursor: pointer;" 
+class="list-group-item clearfix"
+[routerLink]="[index]"
+
+>
+  <div class="col-8 justify-content-lg-start float-left">
+    <h4>{{item.name}}</h4>
+    <p>{{item.description}}</p>
+  </div>
+  <span class="col-4 justify-content-lg-end float-right clearfix">
+    <img [src]="item.imagepath" class="img-thumbnail">
+  </span>
+</a>
+
