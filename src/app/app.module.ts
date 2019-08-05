@@ -1,5 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,10 +15,12 @@ import { UpperHeaderComponent } from './header/upper-header/upper-header.compone
 import { MiddleHeaderComponent } from './header/middle-header/middle-header.component';
 import { LowerHeaderComponent } from './header/lower-header/lower-header.component';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { PageNotFoundComponent } from './page-not-found.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -34,12 +38,15 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     LowerHeaderComponent,
     RecipeStartComponent,
     RecipeEditComponent,
+    PageNotFoundComponent,
     
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
+   
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
